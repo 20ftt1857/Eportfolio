@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 4 eportfolio part 1</title>
+</head>
+<body>
+	<!-- set form action to https://lms.pb.edu.bn/qwerty/displaypost.php 
+		hint: this form accepts file! so configure the form correctly-->
+<form action="https://lms.pb.edu.bn/qwerty/displaypost.php" method="post">
+<h3>Select the village</h3>
+
+	<input list="villages" name="village" id="village">
+	
+<datalist id="villages">
+	<option value="Berakas A">
+	<option value="Lambak">
+	<option value="Labu Estate">
+	<option value="Birau">
+	<option value="Luagan Duduk">
+	<option value="Kuala Belait">
+	<option value="Lamunin">
+	<option value="Subok">
+	<option value="Pengkalan Batu">
+	<option value="Selangan">		
+</datalist>
+<!-- 
+write correct patterns to achieve the requirement as stated in the <h3> elements
+DO NOT CHANGE THE values of the NAME attributes in each element!!!
+-->
+
+<h3>Enter A WORD at least 6 characters. The word must not contain lowercase or uppercase  t, h, s </h3>
+<input type="text" pattern="[A-Ga-G][H-Rh-r][U-Zu-z]{6,}" name="word"><br>
+
+<h3>Replace the min, max and step attributes to equivalent pattern. change type to text</h3>
+<input type="number" name="numbers" min="2" max="4" step="2"><br>
+
+<h3>Upload your latest picture for class listing!</h3>
+<input type="file" name="selfie"><br>
+
+<h3>Try the \W pattern! write your finding in self reflection</h3>
+<input type="text" pattern="\W{3,}" name="W-sample"><br>
+
+<h3>Try the \D pattern! write your finding in self reflection</h3>
+<input type="text" pattern="\D{3,}" name="D-sample"><br>
+
+<!-- WRITE THE REQUIRED PATTERN -->
+<h3>Last but not least.. Enter a sentence, mininum 10 characters and maximum 30 characters. Allow: numbers, alphabet lowercase & uppercase, spaces and question mark</h3>
+<input type="text" pattern="[1-100][A-Za-z]{\003F}+\s*" name="wsdot-sample" min="10" size="30"><br>
+
+<!-- so what's hidden? write your finding in reflection -->
+<input type="hidden" value="bwep2022">
+<p><input type="submit" value="Submit Query"></p>
+</form>
+</body>
+</html>
